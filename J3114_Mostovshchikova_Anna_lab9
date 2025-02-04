@@ -1,0 +1,6 @@
+import numpy as np
+nums = np.array([1, 9, 2, 3, 8, 2, 4, 6, 1, 5, 7, 3]) # исходный массив
+unique, counts = np.unique(nums, return_counts=True) # считаем кол-во вхождений каждого элемента
+repeated_nums = unique[counts >= 2] # Находим элементы, которые встречаются два или более раз
+total_sum = np.sum(repeated_nums) # находим сумму этих чисел
+print(total_sum) # выводим итоговую сумму
